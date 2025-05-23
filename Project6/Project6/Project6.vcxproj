@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\louis\Desktop\A2\Multimedia\opencv\build\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Framework_tools\opencv\build\include;%(AdditionalIncludeDirectories);C:\Dev\Framework_tools\opencv\build\x64\vc16\lib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\louis\Desktop\A2\Multimedia\opencv\build\x64\vc16\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world4110d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Dev\Framework_tools\opencv\build\x64\vc16\lib;$(LibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world4110d.lib;opencv_world4110.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,7 +130,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="brightness.cpp" />
+    <ClCompile Include="canny.cpp" />
+    <ClCompile Include="img_io.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="morphology.cpp" />
+    <ClCompile Include="resize.cpp" />
+    <ClCompile Include="stitch.cpp" />
+    <ClCompile Include="video.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
+    <Text Include="manual.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="brightness.hpp" />
+    <ClInclude Include="canny.hpp" />
+    <ClInclude Include="img_io.hpp" />
+    <ClInclude Include="morphology.hpp" />
+    <ClInclude Include="resize.hpp" />
+    <ClInclude Include="stitch.hpp" />
+    <ClInclude Include="video.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

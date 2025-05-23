@@ -1,0 +1,69 @@
+# mini-gimp Manual
+
+Usage:
+mini-gimp <command> \[options] <input> <output>
+
+Commands and Options:
+
+1. brightness
+   Increase or decrease image brightness.
+   Options:
+   \--beta <value>    Brightness offset (integer, e.g. -100 to 100).
+   Example:
+   mini-gimp brightness --beta 50 in.jpg out.jpg
+
+2. dilate
+   Apply morphological dilation.
+   Options:
+   \--size <value>    Kernel radius (integer >= 1).
+   Example:
+   mini-gimp dilate --size 5 in.jpg out.jpg
+
+3. erode
+   Apply morphological erosion.
+   Options:
+   \--size <value>    Kernel radius (integer >= 1).
+   Example:
+   mini-gimp erode --size 3 in.jpg out.jpg
+
+4. resize
+   Resize image by scale factors or dimensions.
+   Options (choose one):
+   \--fx <factor>     Horizontal scale factor (float).
+   \--fy <factor>     Vertical scale factor (float).
+   \--width <px>      New width in pixels (int).
+   \--height <px>     New height in pixels (int).
+   Examples:
+   mini-gimp resize --fx 0.5 --fy 0.5 in.jpg out.jpg
+   mini-gimp resize --width 800 --height 600 in.jpg out.jpg
+
+5. stitch
+   Create a panorama by stitching multiple images.
+   Arguments: <img1> <img2> \[<img3> ...] <output>
+   Example:
+   mini-gimp stitch left.jpg right.jpg pano.jpg
+
+6. canny
+   Perform Canny edge detection.
+   Options:
+   \--th1 <value>     Lower threshold (int).
+   \--th2 <value>     Upper threshold (int).
+   \--kernel <size>   Aperture size for Sobel operator (odd int, e.g. 3).
+   Example:
+   mini-gimp canny --th1 50 --th2 150 --kernel 3 in.jpg edges.png
+
+7. video
+   Apply brightness adjustment to each frame of a video.
+   Options:
+   \--beta <value>    Brightness offset (integer).
+   Example:
+   mini-gimp video --beta 30 in.mp4 out.mp4
+
+General Options:
+-h, --help           Show this manual.
+
+Notes:
+
+* All input and output file paths must be valid.
+* For `stitch`, at least two input images are required.
+* Video processing reuses the brightness module per frame.

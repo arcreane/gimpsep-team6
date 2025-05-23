@@ -1,28 +1,63 @@
+// main.cpp
 #include <iostream>
-#include <opencv2/core.hpp>
-#include <opencv2/imgcodecs.hpp>
-#include <opencv2/highgui.hpp>
+#include <string>
 
-using namespace cv;
-using namespace std;
+#include "img_io.hpp"
+#include "brightness.hpp"
+#include "morphology.hpp"
+#include "resize.hpp"
+#include "stitch.hpp"
+#include "canny.hpp"
+#include "video.hpp"
+
+static void print_usage() {
+    std::cerr << "Usage: mini-gimp <command> [options] <input> [<input2> …] <output>\n\n"
+        << "Commands:\n"
+        << "  brightness --beta <value>      in.jpg out.jpg\n"
+        << "  dilate     --size <value>      in.jpg out.jpg\n"
+        << "  erode      --size <value>      in.jpg out.jpg\n"
+        << "  resize     (--fx <f> --fy <f> | --width <w> --height <h>)  in.jpg out.jpg\n"
+        << "  stitch     <img1> <img2> [<img3> …] out.jpg\n"
+        << "  canny      --th1 <t1> --th2 <t2> --kernel <k>  in.jpg out.png\n"
+        << "  video      --beta <value>      in.mp4 out.mp4\n"
+        << "  -h, --help    Show this help message\n";
+}
 
 int main(int argc, char** argv) {
-    string imageName = "C:\\Users\\louis\\Desktop\\A2\\Multimedia\\Project\\gimpsep-team6\\Project6\\x64\\Debug\\imagetest.jpeg"; 
-    if (argc > 1) {
-        imageName = argv[1];
+    if (argc < 2) {
+        print_usage();
+        return 1;
     }
 
-    Mat image = imread(imageName, IMREAD_COLOR);
-
-    // Check if image was loaded successfully
-    if (image.empty()) {
-        cerr << "Error: Could not open or find the image!" << endl;
-        return -1;
+    std::string cmd = argv[1];
+    if (cmd == "-h" || cmd == "--help") {
+        print_usage();
+        return 0;
     }
-
-    namedWindow("Display Window", WINDOW_AUTOSIZE);
-    imshow("Display Window", image);
-
-    waitKey(0);
-    return 0;
+    else if (cmd == "brightness") {
+        return brightness::run(argc, argv);
+    }
+    else if (cmd == "dilate") {
+        return morphology::run(argc, argv, true);
+    }
+    else if (cmd == "erode") {
+        return morphology::run(argc, argv, false);
+    }
+    else if (cmd == "resize") {
+        return resize::run(argc, argv);
+    }
+    else if (cmd == "stitch") {
+        return stitch::run(argc, argv);
+    }
+    else if (cmd == "canny") {
+        return canny::run(argc, argv);
+    }
+    else if (cmd == "video") {
+        return video::run(argc, argv);
+    }
+    else {
+        std::cerr << "Error: Unknown command \"" << cmd << "\"\n\n";
+        print_usage();
+        return 1;
+    }
 }

@@ -1,5 +1,5 @@
 #include "morphology.hpp"
-#include "../../img_io.hpp"
+#include "img_io.hpp"
 #include <opencv2/opencv.hpp>
 #include <iostream>
 

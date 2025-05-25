@@ -130,8 +130,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="blur.cpp" />
     <ClCompile Include="brightness.cpp" />
     <ClCompile Include="canny.cpp" />
+    <ClCompile Include="grayscale.cpp" />
     <ClCompile Include="img_io.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="morphology.cpp" />
@@ -144,8 +146,10 @@
     <Text Include="manual.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="blur.hpp" />
     <ClInclude Include="brightness.hpp" />
     <ClInclude Include="canny.hpp" />
+    <ClInclude Include="grayscale.hpp" />
     <ClInclude Include="img_io.hpp" />
     <ClInclude Include="morphology.hpp" />
     <ClInclude Include="resize.hpp" />

@@ -59,6 +59,18 @@ Commands and Options:
    Example:
    mini-gimp video --beta 30 in.mp4 out.mp4
 
+8. grayscale
+   Convert image to grayscale.
+   Example:
+   mini-gimp grayscale in.jpg out.jpg
+
+9. blur
+   Apply Gaussian blur to an image.
+   Options:
+   \--ksize <value>   Kernel size (odd positive integer, e.g., 3, 5).
+   Example:
+   mini-gimp blur --ksize 5 in.jpg out.jpg
+
 General Options:
 -h, --help           Show this manual.
 

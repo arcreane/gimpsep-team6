@@ -9,17 +9,21 @@
 #include "stitch.hpp"
 #include "canny.hpp"
 #include "video.hpp"
+#include "grayscale.hpp"
+#include "blur.hpp"
 
 static void print_usage() {
-    std::cerr << "Usage: mini-gimp <command> [options] <input> [<input2> …] <output>\n\n"
+    std::cerr << "Usage: mini-gimp <command> [options] <input> [<input2> ï¿½] <output>\n\n"
         << "Commands:\n"
         << "  brightness --beta <value>      in.jpg out.jpg\n"
         << "  dilate     --size <value>      in.jpg out.jpg\n"
         << "  erode      --size <value>      in.jpg out.jpg\n"
         << "  resize     (--fx <f> --fy <f> | --width <w> --height <h>)  in.jpg out.jpg\n"
-        << "  stitch     <img1> <img2> [<img3> …] out.jpg\n"
+        << "  stitch     <img1> <img2> [<img3> ï¿½] out.jpg\n"
         << "  canny      --th1 <t1> --th2 <t2> --kernel <k>  in.jpg out.png\n"
         << "  video      --beta <value>      in.mp4 out.mp4\n"
+        << "  grayscale  in.jpg out.jpg\n"
+        << "  blur       --ksize <value>   in.jpg out.jpg\n"
         << "  -h, --help    Show this help message\n";
 }
 
@@ -54,6 +58,12 @@ int main(int argc, char** argv) {
     }
     else if (cmd == "video") {
         return video::run(argc, argv);
+    }
+    else if (cmd == "grayscale") {
+        return grayscale::run(argc, argv);
+    }
+    else if (cmd == "blur") {
+        return blur::run(argc, argv);
     }
     else {
         std::cerr << "Error: Unknown command \"" << cmd << "\"\n\n";

@@ -42,6 +42,12 @@
     <ClCompile Include="video.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
+    <ClCompile Include="blur.cpp">
+      <Filter>Fichiers sources\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="grayscale.cpp">
+      <Filter>Fichiers sources\filters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="manual.txt" />
@@ -67,6 +73,12 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="video.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="blur.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="grayscale.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

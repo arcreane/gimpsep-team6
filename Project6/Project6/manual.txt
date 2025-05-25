@@ -71,6 +71,19 @@ Commands and Options:
    Example:
    mini-gimp blur --ksize 5 in.jpg out.jpg
 
+10. bgsubtract
+    Perform background subtraction on a video to isolate foreground objects.
+    The output video will be in AVI format using MJPG codec.
+    Note: This works best with a static camera.
+    Options:
+    --varthresh <value>   Set MOG2 variance threshold (default 16.0). 
+                          Lower values are more sensitive to changes.
+    --history <value>     Set MOG2 history length (default 500).
+    --noshadows           If set, detected shadows will not be part of the 
+                          foreground output.
+    Example:
+    mini-gimp bgsubtract --varthresh 10 --noshadows input.mp4 output_fg.avi
+
 General Options:
 -h, --help           Show this manual.
 

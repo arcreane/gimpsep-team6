@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bgsubtract.cpp" />
     <ClCompile Include="blur.cpp" />
     <ClCompile Include="brightness.cpp" />
     <ClCompile Include="canny.cpp" />
@@ -146,6 +147,7 @@
     <Text Include="manual.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bgsubtract.hpp" />
     <ClInclude Include="blur.hpp" />
     <ClInclude Include="brightness.hpp" />
     <ClInclude Include="canny.hpp" />

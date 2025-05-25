@@ -11,6 +11,7 @@
 #include "video.hpp"
 #include "grayscale.hpp"
 #include "blur.hpp"
+#include "bgsubtract.hpp"
 
 static void print_usage() {
     std::cerr << "Usage: mini-gimp <command> [options] <input> [<input2> �] <output>\n\n"
@@ -24,6 +25,7 @@ static void print_usage() {
         << "  video      --beta <value>      in.mp4 out.mp4\n"
         << "  grayscale  in.jpg out.jpg\n"
         << "  blur       --ksize <value>   in.jpg out.jpg\n"
+        << "  bgsubtract [opts] <in_vid> <out_vid.avi>\n"
         << "  -h, --help    Show this help message\n";
 }
 
@@ -64,6 +66,9 @@ int main(int argc, char** argv) {
     }
     else if (cmd == "blur") {
         return blur::run(argc, argv);
+    }
+    else if (cmd == "bgsubtract") {
+        return bgsubtract::run(argc, argv);
     }
     else {
         std::cerr << "Error: Unknown command \"" << cmd << "\"\n\n";

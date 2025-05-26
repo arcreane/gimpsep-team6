@@ -12,6 +12,11 @@
 #include "grayscale.hpp"
 #include "blur.hpp"
 #include "bgsubtract.hpp"
+#include "panorama.h"
+#include "face_detect.h"
+#include "face_blur.h"
+
+
 
 static void print_usage() {
     std::cerr << "Usage: mini-gimp <command> [options] <input> [<input2> �] <output>\n\n"
@@ -26,6 +31,9 @@ static void print_usage() {
         << "  grayscale  in.jpg out.jpg\n"
         << "  blur       --ksize <value>   in.jpg out.jpg\n"
         << "  bgsubtract [opts] <in_vid> <out_vid.avi>\n"
+        << "  panorama   <img1> <img2> [<img3> …] out.jpg\n"
+        << "  face_detect in.jpg out.jpg     (détection de visages)\n"
+        << "  face_blur   in.jpg out.jpg      (floute les visages détectés)\n"
         << "  -h, --help    Show this help message\n";
 }
 
@@ -70,6 +78,17 @@ int main(int argc, char** argv) {
     else if (cmd == "bgsubtract") {
         return bgsubtract::run(argc, argv);
     }
+    else if (cmd == "panorama") {
+        return panorama::run(argc, argv);
+    }
+    else if (cmd == "face_detect") {
+        return face_detect::run(argc, argv);
+    }
+    else if (cmd == "face_blur") {
+        return face_blur::run(argc, argv);
+    }
+
+
     else {
         std::cerr << "Error: Unknown command \"" << cmd << "\"\n\n";
         print_usage();

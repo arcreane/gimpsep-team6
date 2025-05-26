@@ -51,6 +51,9 @@
     <ClCompile Include="bgsubtract.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
+    <ClCompile Include="Panorama.cpp">
+      <Filter>Fichiers sources\filters</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="manual.txt" />
@@ -85,6 +88,9 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="bgsubtract.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Panorama.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

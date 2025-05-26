@@ -87,7 +87,13 @@ int main(int argc, char** argv) {
     else if (cmd == "face_blur") {
         return face_blur::run(argc, argv);
     }
-
+        else if (cmd == "Rota")
+        {
+        return Rota::run(argc, argv);
+    }
+    else if (cmd == "flip") {
+        return flip::run(argc, argv);
+    }
 
     else {
         std::cerr << "Error: Unknown command \"" << cmd << "\"\n\n";

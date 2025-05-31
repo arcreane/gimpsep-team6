@@ -105,13 +105,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\elena\OneDrive - Notre Dame de Grace\Documents\Multimedia Application class\opencv\build\include;C:\Dev\Framework_tools\opencv\build\include;%(AdditionalIncludeDirectories);C:\Dev\Framework_tools\opencv\build\x64\vc16\lib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Dev\Framework_tools\opencv\build\include;%(AdditionalIncludeDirectories);C:\Dev\Framework_tools\opencv\build\x64\vc16\lib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\elena\OneDrive - Notre Dame de Grace\Documents\Multimedia Application class\opencv\build\x64\vc16\lib;C:\Dev\Framework_tools\opencv\build\x64\vc16\lib;$(LibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world4110d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Dev\Framework_tools\opencv\build\x64\vc16\lib;$(LibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world4110d.lib;opencv_world4110.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -131,39 +131,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bgsubtract.cpp" />
-    <ClCompile Include="blur.cpp" />
-    <ClCompile Include="brightness.cpp" />
-    <ClCompile Include="canny.cpp" />
-    <ClCompile Include="face_blur.cpp" />
-    <ClCompile Include="face_detect.cpp" />
-    <ClCompile Include="grayscale.cpp" />
+    <ClCompile Include="BgSubtract.cpp" />
+    <ClCompile Include="BlurFilter.cpp" />
+    <ClCompile Include="BrightnessFilter.cpp" />
+    <ClCompile Include="BrightnessFilter.hpp" />
+    <ClCompile Include="CannyFilter.cpp" />
+    <ClCompile Include="FilterRunner.cpp" />
+    <ClCompile Include="GrayscaleFilter.cpp" />
+    <ClCompile Include="FaceBlurFilter.hpp" />
+    <ClCompile Include="FaceBlurFilter.cpp" />
+    <ClCompile Include="FaceDetectFilter.cpp" />
     <ClCompile Include="img_io.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="morphology.cpp" />
+    <ClCompile Include="MorphologyFilter.cpp" />
     <ClCompile Include="Panorama.cpp" />
-    <ClCompile Include="resize.cpp" />
-    <ClCompile Include="stitch.cpp" />
-    <ClCompile Include="video.cpp" />
+    <ClCompile Include="ResizeFilter.cpp" />
+    <ClCompile Include="StitchFilter.cpp" />
+    <ClCompile Include="StitchFilter.hpp" />
+    <ClCompile Include="VideoBrightnessProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />
     <Text Include="manual.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bgsubtract.hpp" />
-    <ClInclude Include="blur.hpp" />
-    <ClInclude Include="brightness.hpp" />
-    <ClInclude Include="canny.hpp" />
-    <ClInclude Include="face_blur.h" />
-    <ClInclude Include="face_detect.h" />
-    <ClInclude Include="grayscale.hpp" />
+    <ClInclude Include="AbstractFilter.hpp" />
+    <ClInclude Include="BgSubtract.hpp" />
+    <ClInclude Include="BlurFilter.hpp" />
+    <ClInclude Include="CannyFilter.hpp" />
+    <ClInclude Include="FaceDetectFilter.hpp" />
+    <ClInclude Include="FilterRunner.hpp" />
+    <ClInclude Include="GrayScaleFilter.hpp" />
     <ClInclude Include="img_io.hpp" />
-    <ClInclude Include="morphology.hpp" />
+    <ClInclude Include="MorphologyFilter.hpp" />
     <ClInclude Include="Panorama.h" />
-    <ClInclude Include="resize.hpp" />
-    <ClInclude Include="stitch.hpp" />
-    <ClInclude Include="video.hpp" />
+    <ClInclude Include="ResizeFilter.hpp" />
+    <ClInclude Include="VideoBrightnessProcessor.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

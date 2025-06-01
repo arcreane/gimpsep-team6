@@ -3,12 +3,51 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/video.hpp>
 #include <opencv2/videoio.hpp>
+#include <opencv2/highgui.hpp>
 #include <iostream>
+#include <string>
+#include <algorithm>
+#include <cctype>
 
 bool BgSubtract::process(const Config& config) {
-    cv::VideoCapture cap(config.inputVideoPath);
+    cv::VideoCapture cap;
+    bool isCamera = false;
+    int cameraId = -1;
+
+    std::cout << "[Debug] Input video path: '" << config.inputVideoPath << "'" << std::endl;
+
+    // Vérifier si inputVideoPath est un nombre (ID de caméra)
+    if (!config.inputVideoPath.empty() &&
+        std::all_of(config.inputVideoPath.begin(), config.inputVideoPath.end(),
+                    [](unsigned char c){ return std::isdigit(c); })) {
+        try {
+            cameraId = std::stoi(config.inputVideoPath);
+            isCamera = true;
+        } catch (const std::invalid_argument& ia) {
+            std::cerr << "[Debug] std::stoi invalid_argument: " << ia.what() << " for input: " << config.inputVideoPath << std::endl;
+            isCamera = false;
+        } catch (const std::out_of_range& oor) {
+            std::cerr << "[Debug] std::stoi out_of_range: " << oor.what() << " for input: " << config.inputVideoPath << std::endl;
+            isCamera = false;
+        }
+    }
+
+    std::cout << "[Debug] isCamera: " << (isCamera ? "true" : "false") << ", cameraId: " << cameraId << std::endl;
+
+    if (isCamera) {
+        cap.open(cameraId);
+        std::cout << "Info: Attempting to open camera with ID: " << cameraId << std::endl;
+    } else {
+        std::cout << "Info: Attempting to open video file: " << config.inputVideoPath << std::endl;
+        cap.open(config.inputVideoPath);
+    }
+
     if (!cap.isOpened()) {
-        std::cerr << "Error: Cannot open video " << config.inputVideoPath << std::endl;
+        if (isCamera) {
+            std::cerr << "Error: Cannot open camera with ID " << cameraId << std::endl;
+        } else {
+            std::cerr << "Error: Cannot open video " << config.inputVideoPath << std::endl;
+        }
         return false;
     }
 
@@ -52,6 +91,15 @@ bool BgSubtract::process(const Config& config) {
         frame.copyTo(result, cleaned);
 
         writer.write(result);
+
+        // Afficher le résultat et vérifier si une touche est pressée pour quitter
+        cv::imshow("Background Subtraction - Press Q or ESC to quit", result);
+        char key = (char)cv::waitKey(1);
+        if (key == 'q' || key == 'Q' || key == 27) { // 27 est le code ASCII pour ESC
+            std::cout << "Arrêt demandé par l'utilisateur." << std::endl;
+            break;
+        }
+
         if (++frameCount % 100 == 0) {
             std::cout << "Processed " << frameCount << " frames." << std::endl;
         }
@@ -59,6 +107,7 @@ bool BgSubtract::process(const Config& config) {
 
     cap.release();
     writer.release();
+    cv::destroyAllWindows(); // Fermer toutes les fenêtres OpenCV
     std::cout << "Output saved to: " << outPath << std::endl;
     return true;
 }

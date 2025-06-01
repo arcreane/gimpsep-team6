@@ -1,4 +1,4 @@
-#pragma once
+ragma once
 
 namespace grayscale {
     int run(int argc, char** argv);

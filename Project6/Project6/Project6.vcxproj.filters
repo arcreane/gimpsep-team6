@@ -24,31 +24,52 @@
     <ClCompile Include="img_io.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="brightness.cpp">
+    <ClCompile Include="BrightnessFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="morphology.cpp">
+    <ClCompile Include="MorphologyFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="resize.cpp">
+    <ClCompile Include="ResizeFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="canny.cpp">
+    <ClCompile Include="GrayscaleFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="stitch.cpp">
+    <ClCompile Include="StitchFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="video.cpp">
+    <ClCompile Include="VideoBrightnessProcessor.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="blur.cpp">
+    <ClCompile Include="BlurFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="grayscale.cpp">
+    <ClCompile Include="BgSubtract.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="bgsubtract.cpp">
+    <ClCompile Include="Panorama.cpp">
+      <Filter>Fichiers sources\filters</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceBlurFilter.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceDetectFilter.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="BrightnessFilter.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="StitchFilter.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceBlurFilter.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClCompile>
+    <ClCompile Include="FilterRunner.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CannyFilter.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,31 +81,37 @@
     <ClInclude Include="img_io.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="brightness.hpp">
+    <ClInclude Include="VideoBrightnessProcessor.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="morphology.hpp">
+    <ClInclude Include="BgSubtract.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="resize.hpp">
+    <ClInclude Include="Panorama.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="canny.hpp">
+    <ClInclude Include="AbstractFilter.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="stitch.hpp">
+    <ClInclude Include="GrayScaleFilter.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="video.hpp">
+    <ClInclude Include="BlurFilter.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="blur.hpp">
+    <ClInclude Include="MorphologyFilter.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="grayscale.hpp">
+    <ClInclude Include="ResizeFilter.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="bgsubtract.hpp">
+    <ClInclude Include="CannyFilter.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetectFilter.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="FilterRunner.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

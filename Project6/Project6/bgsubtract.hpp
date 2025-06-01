@@ -1,7 +1,19 @@
-#pragma once
+#ifndef BGSUBTRACT_HPP
+#define BGSUBTRACT_HPP
 
-#include <opencv2/opencv.hpp> 
+#include <string>
 
-namespace bgsubtract {
-    int run(int argc, char** argv);
-} 
+class BgSubtract {
+public:
+    struct Config {
+        double varThreshold = 16.0;
+        int history = 500;
+        bool detectShadows = true;
+        bool keepOnlyPureForeground = false;
+        std::string inputVideoPath;
+        std::string outputVideoPath;
+    };
+
+    static bool process(const Config& confisg);
+};
+#endif

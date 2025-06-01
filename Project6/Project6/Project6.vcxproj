@@ -24,6 +24,7 @@
     <ProjectGuid>{7494e35c-d4db-4e5b-976a-8b052493aed5}</ProjectGuid>
     <RootNamespace>Project6</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Project6</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -104,13 +105,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Dev\Framework_tools\opencv\build\include;%(AdditionalIncludeDirectories);C:\Dev\Framework_tools\opencv\build\x64\vc16\lib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\elena\OneDrive - Notre Dame de Grace\Documents\Multimedia Application class\opencv\build\include;C:\Dev\Framework_tools\opencv\build\include;%(AdditionalIncludeDirectories);C:\Dev\Framework_tools\opencv\build\x64\vc16\lib</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Dev\Framework_tools\opencv\build\x64\vc16\lib;$(LibraryPath)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_world4110d.lib;opencv_world4110.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\elena\OneDrive - Notre Dame de Grace\Documents\Multimedia Application class\opencv\build\x64\vc16\lib;C:\Dev\Framework_tools\opencv\build\x64\vc16\lib;$(LibraryPath)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_world4110d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,10 +135,14 @@
     <ClCompile Include="blur.cpp" />
     <ClCompile Include="brightness.cpp" />
     <ClCompile Include="canny.cpp" />
+    <ClCompile Include="face_blur.cpp" />
+    <ClCompile Include="face_detect.cpp" />
     <ClCompile Include="grayscale.cpp" />
     <ClCompile Include="img_io.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="morphology.cpp" />
+    <ClCompile Include="object-detect.cpp" />
+    <ClCompile Include="Panorama.cpp" />
     <ClCompile Include="resize.cpp" />
     <ClCompile Include="stitch.cpp" />
     <ClCompile Include="video.cpp" />
@@ -151,9 +156,13 @@
     <ClInclude Include="blur.hpp" />
     <ClInclude Include="brightness.hpp" />
     <ClInclude Include="canny.hpp" />
+    <ClInclude Include="face_blur.h" />
+    <ClInclude Include="face_detect.h" />
     <ClInclude Include="grayscale.hpp" />
     <ClInclude Include="img_io.hpp" />
     <ClInclude Include="morphology.hpp" />
+    <ClInclude Include="object_detect.h" />
+    <ClInclude Include="Panorama.h" />
     <ClInclude Include="resize.hpp" />
     <ClInclude Include="stitch.hpp" />
     <ClInclude Include="video.hpp" />

@@ -144,7 +144,6 @@
     <ClCompile Include="img_io.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MorphologyFilter.cpp" />
-    <ClCompile Include="Panorama.cpp" />
     <ClCompile Include="ResizeFilter.cpp" />
     <ClCompile Include="StitchFilter.cpp" />
     <ClCompile Include="StitchFilter.hpp" />
@@ -164,7 +163,6 @@
     <ClInclude Include="GrayScaleFilter.hpp" />
     <ClInclude Include="img_io.hpp" />
     <ClInclude Include="MorphologyFilter.hpp" />
-    <ClInclude Include="Panorama.h" />
     <ClInclude Include="ResizeFilter.hpp" />
     <ClInclude Include="VideoBrightnessProcessor.hpp" />
   </ItemGroup>

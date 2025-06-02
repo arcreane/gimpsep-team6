@@ -84,6 +84,25 @@ Commands and Options:
     Example:
     mini-gimp bgsubtract --varthresh 10 --noshadows input.mp4 output_fg.avi
 
+11. face_detect
+   Detect and annotate faces in an image.
+   Class: FaceDetectFilter
+   Options:
+     (none)
+   Example:
+     mini-gimp face_detect in.jpg out.jpg
+
+12. face_blur
+   Detect faces and anonymize them using Gaussian blur.
+   Class: FaceBlurFilter (internally uses FaceDetectFilter)
+   Options:
+     --ksize <value>       Blur kernel size (odd positive integer).
+   Example:
+     mini-gimp face_blur --ksize 15 in.jpg out.jpg
+
+
+
+
 General Options:
 -h, --help           Show this manual.
 

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\BlurFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\BrightnessFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\CannyFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\FaceBlurFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\FaceDetectFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\FilterRunner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\GrayscaleFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\MorphologyFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\ResizeFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\Rota.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\StitchFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\VideoBrightnessProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\bgsubtract.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\flip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\grayscale.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\img_io.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\object-detect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\adamj\OneDrive\Pulpit\Studia\6 Semestr\Multimedia App Development\Project\gimpsep-team6\Project6\Project6\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F3B68EDA-8AB2-3134-914F-C5BAE1561C25}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -5,8 +5,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS} include)
 
 file(GLOB SRC
-  src/*.cpp
-  src/filters/*.cpp
+  *.cpp
 )
 
 add_executable(mini-gimp ${SRC})

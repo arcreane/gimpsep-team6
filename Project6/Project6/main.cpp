@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <fstream>
 
 #include "img_io.hpp"
 #include "FilterRunner.hpp"
@@ -42,6 +43,19 @@ int main(int argc, char** argv) {
     }
 
     std::string cmd = argv[1];
+    std::string manual = "manual.txt";
+    if (cmd == "-h" || cmd == "--help") {
+        std::ifstream manual("manual.txt");
+        if (manual.is_open()) {
+            std::cout << manual.rdbuf();
+            return 0;
+        }
+        else {
+            std::cerr << "manual.txt not found.\n";
+            return 1;
+        }
+    }
+
 
     if (cmd == "grayscale") {
         if (argc != 4) return (print_usage(), 1);

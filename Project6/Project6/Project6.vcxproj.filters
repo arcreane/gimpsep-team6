@@ -48,9 +48,6 @@
     <ClCompile Include="BgSubtract.cpp">
       <Filter>Fichiers sources\filters</Filter>
     </ClCompile>
-    <ClCompile Include="Panorama.cpp">
-      <Filter>Fichiers sources\filters</Filter>
-    </ClCompile>
     <ClCompile Include="FaceBlurFilter.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -85,9 +82,6 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="BgSubtract.hpp">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="Panorama.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="AbstractFilter.hpp">
